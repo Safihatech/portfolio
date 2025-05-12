@@ -1,0 +1,166 @@
+/* General Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Navbar */
+nav ul {
+  list-style-type: none;
+  display: flex; /* Using Flexbox for alignment */
+  justify-content: flex-end; /* Aligns items to the right */
+  gap: 20px; /* Adds spacing between menu items */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hover state */
+nav ul li a:hover {
+  color: #ecf0f1;
+  background-color: #2980b9; /* Change background on hover */
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Active and Focused state (When clicked or selected) */
+nav ul li a:active,
+nav ul li a:focus {
+  color: #fff; /* Ensure text remains white */
+  background-color: #3498db; /* Change background color when active */
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2ecc71;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c0392b;
+}
+
+/* Features Section */
+#features {
+  padding: 60px 0;
+  background-color: #ecf0f1;
+}
+
+#features h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #34495e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items */
+    margin-top: 10px;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .features-list {
+    flex-direction: column; /* Stack feature boxes vertically */
+    align-items: center;
+  }
+
+  .feature {
+    width: 80%; /* Make each feature box 80% of the container's width */
+    margin-bottom: 20px; /* Add some space between stacked features */
+  }
+}
